@@ -32,7 +32,6 @@ function saveProfile() {
     </div>
 
     <div class="profile-layout">
-      <!-- Sidebar Nav -->
       <nav class="profile-nav">
         <button class="profile-nav__btn" :class="{ active: tab === 'info' }" @click="tab = 'info'">👤 Профиль</button>
         <button class="profile-nav__btn" :class="{ active: tab === 'orders' }" @click="tab = 'orders'">📦 Заказы</button>
@@ -41,7 +40,6 @@ function saveProfile() {
       </nav>
 
       <div>
-        <!-- Info Tab -->
         <div v-if="tab === 'info'" class="profile-card">
           <div class="avatar-section">
             <div class="avatar">{{ authStore.user.name.charAt(0) }}</div>
@@ -61,7 +59,6 @@ function saveProfile() {
           <button class="btn btn--primary btn--sm" style="margin-top: 20px" @click="saveProfile">Сохранить</button>
         </div>
 
-        <!-- Orders Tab -->
         <div v-if="tab === 'orders'">
           <div v-if="orderStore.orders.length" class="orders-compact">
             <div v-for="o in orderStore.orders" :key="o.id" class="order-row">
@@ -78,7 +75,6 @@ function saveProfile() {
           </div>
         </div>
 
-        <!-- Addresses Tab -->
         <div v-if="tab === 'addresses'" class="profile-card">
           <div class="profile-card__title">Адреса доставки</div>
           <div v-if="authStore.user.addresses.length" class="addresses-list">
@@ -163,7 +159,6 @@ function saveProfile() {
 }
 .no-addresses { font-size: 0.9rem; color: var(--text-m); margin-bottom: 16px; }
 
-// Reuse status colors from orders page
 .status--pending { background: #fef3c7; color: #92400e; }
 .status--processing { background: #dbeafe; color: #1e40af; }
 .status--shipped { background: #e0e7ff; color: #4338ca; }

@@ -17,7 +17,6 @@ export const useCartStore = defineStore('cart', () => {
   const FREE_SHIPPING = config.public.freeShippingThreshold as number
   const SHIPPING_COST = config.public.shippingCost as number
 
-  // Getters
   const count = computed(() =>
     items.value.reduce((sum, item) => sum + item.qty, 0),
   )
@@ -38,7 +37,6 @@ export const useCartStore = defineStore('cart', () => {
 
   const isEmpty = computed(() => items.value.length === 0)
 
-  // Actions
   function addItem(product: Product, qty: number = 1): void {
     const existing = items.value.find((i) => i.id === product.id)
 

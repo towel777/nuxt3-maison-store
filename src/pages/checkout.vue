@@ -10,7 +10,6 @@ const authStore = useAuthStore()
 const orderStore = useOrderStore()
 const toast = useToastStore()
 
-// Redirect if not authenticated or cart is empty
 if (!authStore.isAuthenticated) {
   navigateTo('/')
 }
@@ -64,7 +63,6 @@ function placeOrder() {
 
     <div class="checkout-layout">
       <div>
-        <!-- Contact -->
         <div class="form-section">
           <div class="form-section__title">Контактные данные</div>
           <div class="form-grid">
@@ -75,7 +73,6 @@ function placeOrder() {
           </div>
         </div>
 
-        <!-- Address -->
         <div class="form-section">
           <div class="form-section__title">Адрес доставки</div>
           <div class="form-grid">
@@ -86,7 +83,6 @@ function placeOrder() {
           </div>
         </div>
 
-        <!-- Payment -->
         <div class="form-section">
           <div class="form-section__title">Способ оплаты</div>
           <div style="display: flex; gap: 10px; flex-wrap: wrap">
@@ -103,7 +99,6 @@ function placeOrder() {
         </div>
       </div>
 
-      <!-- Order Summary -->
       <div class="order-summary">
         <div class="order-summary__title">Ваш заказ</div>
 

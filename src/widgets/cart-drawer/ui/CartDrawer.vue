@@ -19,7 +19,6 @@ function goCheckout() {
 </script>
 
 <template>
-  <!-- Overlay -->
   <Teleport to="body">
     <div class="overlay" :class="{ open: cartStore.isOpen }" @click="cartStore.close()" />
 

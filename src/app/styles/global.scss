@@ -1,7 +1,5 @@
-// ==================== RESET ====================
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-// ==================== VARIABLES (runtime) ====================
 :root {
   --bg: #faf8f5;
   --bg-card: #fff;
@@ -49,12 +47,10 @@ input, select, textarea { font-family: inherit; border: none; outline: none; bac
 ul, ol { list-style: none; }
 img { display: block; max-width: 100%; }
 
-// Scrollbar
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
 
-// ==================== TRANSITIONS ====================
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -68,7 +64,6 @@ img { display: block; max-width: 100%; }
   transform: translateY(-12px);
 }
 
-// ==================== SHARED CLASSES ====================
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -110,7 +105,6 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(to right, transparent, var(--border), transparent);
 }
 
-// ==================== BUTTONS ====================
 .btn {
   display: inline-flex;
   align-items: center;
@@ -156,7 +150,6 @@ img { display: block; max-width: 100%; }
   &:disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
 }
 
-// ==================== FORMS ====================
 .form-section {
   margin-bottom: 32px;
 
@@ -213,7 +206,6 @@ select.form-input {
   padding-right: 32px;
 }
 
-// ==================== EMPTY STATE ====================
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -227,7 +219,6 @@ select.form-input {
   &__text { font-size: 0.9rem; color: var(--text-m); margin-bottom: 24px; }
 }
 
-// ==================== RESPONSIVE ====================
 @media (max-width: 600px) {
   .form-grid { grid-template-columns: 1fr; }
 }

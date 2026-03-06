@@ -37,7 +37,6 @@ export const useOrderStore = defineStore('order', () => {
     orders.value.unshift(order)
     lastOrderId.value = orderId
 
-    // Simulate order status progression
     simulateStatusChanges(orderId)
 
     return orderId
@@ -47,10 +46,6 @@ export const useOrderStore = defineStore('order', () => {
     return orders.value.find((o) => o.id === id)
   }
 
-  /**
-   * Simulates real-time status updates for demo purposes.
-   * In production, this would be handled by WebSocket or polling.
-   */
   function simulateStatusChanges(orderId: string): void {
     const statuses: OrderStatus[] = ['pending', 'processing', 'shipped', 'delivered']
     let idx = 0

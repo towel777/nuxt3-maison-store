@@ -4,7 +4,6 @@ import ProductCard from '@/entities/product/ui/ProductCard.vue'
 
 const productStore = useProductStore()
 
-// Fetch products on server
 await productStore.fetchProducts()
 
 useHead({ title: 'Каталог — MAISON' })
@@ -18,7 +17,6 @@ useHead({ title: 'Каталог — MAISON' })
     </div>
 
     <div class="catalog-layout">
-      <!-- Sidebar Filters -->
       <aside class="filters">
         <div class="search-wrap">
           <input
@@ -63,7 +61,6 @@ useHead({ title: 'Каталог — MAISON' })
         </div>
       </aside>
 
-      <!-- Product Grid -->
       <div>
         <div v-if="productStore.filteredProducts.length" class="products-grid">
           <ProductCard
